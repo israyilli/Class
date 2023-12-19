@@ -1,0 +1,55 @@
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    border: 1px solid black;
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+
+}
+
+
+.container .box1 {
+    background-color: wheat;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    animation: movement 3s infinite;
+ 
+}
+
+@keyframes movement {
+    
+    25% {
+        top: 0;
+        left: calc(100% - 100px);
+        background-color: antiquewhite;
+    }
+
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        background-color: aquamarine;
+    }
+
+    75% {
+        top: calc(100% - 100px);
+        left: 0;
+        background-color: aqua;
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+        background-color: rgb(71, 182, 173);
+    }
+}
+
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      label {
+        display: block;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="humanForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" required />
+
+      <label for="type">Select Type:</label>
+      <select id="type" onchange="formss()">
+        <option value="student">Student</option>
+        <option value="employee">Employee</option>
+      </select>
+
+      <div id="employees" style="display: none">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" />
+
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" />
+
+        <label for="position">Position:</label>
+        <select id="position">
+          <option value="Manager">Manager</option>
+          <option value="Developer">Developer</option>
+          <option value="Teacher">Teacher</option>
+        </select>
+      </div>
+
+      <div id="studentss" style="display: none">
+        <label for="groupName">Group Name:</label>
+        <input type="text" id="groupName" />
+
+        <label for="GPA">GPA:</label>
+        <input type="number" id="GPA" min="0" max="100" />
+
+        <label for="hobbies">Hobbies:</label>
+        <input type="text" id="hobbies" />
+      </div>
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <ul id="resultList"></ul>
+    <script src="./app.js"></script>
+
+    <script>
+      function formss() {
+        var type = document.getElementById("type").value;
+        var studentss = document.getElementById("studentss");
+        var employees = document.getElementById("employees");
+
+        if (type === "student") {
+          studentss.style.display = "block";
+          employees.style.display = "none";
+        } else if (type === "employee") {
+          studentss.style.display = "none";
+          employees.style.display = "block";
+        }
+      }
+
+      function submitForm() {
+        var name = document.getElementById("name").value;
+        var surname = document.getElementById("surname").value;
+        var age = document.getElementById("age").value;
+        var type = document.getElementById("type").value;
+
+        var listItem = document.createElement("li");
+        listItem.textContent = `Name: ${name}, Surname: ${surname}, Age: ${age}, Type: ${type}`;
+
+        document.getElementById("resultList").appendChild(listItem);
+
+        // Formu temizlemek ucun
+        document.getElementById("humanForm").reset();
+        document.getElementById("studentss").style.display = "none";
+        document.getElementById("employees").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "singers": [
+    {
+      "id": 1,
+      "name": "Adele",
+      "nationality": "British",
+      "image": "https://static.independent.co.uk/2022/02/08/19/TIDEFRONT%20Adele%20Brits%202.jpg?width=1200&height=900&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Beyonce",
+      "nationality": "American",
+      "image": "https://cdn.britannica.com/51/188751-050-D4E1CFBC/Beyonce-2010.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ed Sheeran",
+      "nationality": "British",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ed_Sheeran-6886_%28cropped%29.jpg/1200px-Ed_Sheeran-6886_%28cropped%29.jpg"
+    }
+  ]
+}
