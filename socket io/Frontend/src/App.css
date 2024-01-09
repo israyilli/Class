@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.left-element {
+  /* position: absolute; */
+  left: 0;
+  /* padding: 10px 12px; */
+}
+.right-element {
+  /* position: absolute; */
+  right: 0;
+  /* padding: 10px 12px; */
+}
